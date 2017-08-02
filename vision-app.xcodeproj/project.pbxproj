@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DAA22B891F300F70004B53CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA22B881F300F70004B53CC /* AppDelegate.swift */; };
-		DAA22B8B1F300F70004B53CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA22B8A1F300F70004B53CC /* ViewController.swift */; };
+		DAA22B8B1F300F70004B53CC /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA22B8A1F300F70004B53CC /* CameraVC.swift */; };
 		DAA22B8E1F300F70004B53CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA22B8C1F300F70004B53CC /* Main.storyboard */; };
 		DAA22B901F300F70004B53CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA22B8F1F300F70004B53CC /* Assets.xcassets */; };
 		DAA22B931F300F70004B53CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA22B911F300F70004B53CC /* LaunchScreen.storyboard */; };
+		DAA22B9E1F301F57004B53CC /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA22B9D1F301F57004B53CC /* RoundedShadowView.swift */; };
+		DAA22BA01F3020BC004B53CC /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA22B9F1F3020BC004B53CC /* RoundedShadowButton.swift */; };
+		DAA22BA21F30216B004B53CC /* RoundedShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA22BA11F30216B004B53CC /* RoundedShadowImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DAA22B851F300F6F004B53CC /* vision-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vision-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA22B881F300F70004B53CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAA22B8A1F300F70004B53CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAA22B8A1F300F70004B53CC /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		DAA22B8D1F300F70004B53CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAA22B8F1F300F70004B53CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA22B921F300F70004B53CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA22B941F300F70004B53CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA22B9D1F301F57004B53CC /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		DAA22B9F1F3020BC004B53CC /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		DAA22BA11F30216B004B53CC /* RoundedShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		DAA22B871F300F6F004B53CC /* vision-app */ = {
 			isa = PBXGroup;
 			children = (
+				DAA22B9C1F300FE6004B53CC /* Resources */,
+				DAA22B9B1F300FD4004B53CC /* View */,
+				DAA22B9A1F300FCB004B53CC /* Controller */,
 				DAA22B881F300F70004B53CC /* AppDelegate.swift */,
-				DAA22B8A1F300F70004B53CC /* ViewController.swift */,
 				DAA22B8C1F300F70004B53CC /* Main.storyboard */,
 				DAA22B8F1F300F70004B53CC /* Assets.xcassets */,
 				DAA22B911F300F70004B53CC /* LaunchScreen.storyboard */,
 				DAA22B941F300F70004B53CC /* Info.plist */,
 			);
 			path = "vision-app";
+			sourceTree = "<group>";
+		};
+		DAA22B9A1F300FCB004B53CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAA22B8A1F300F70004B53CC /* CameraVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAA22B9B1F300FD4004B53CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAA22B9D1F301F57004B53CC /* RoundedShadowView.swift */,
+				DAA22B9F1F3020BC004B53CC /* RoundedShadowButton.swift */,
+				DAA22BA11F30216B004B53CC /* RoundedShadowImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAA22B9C1F300FE6004B53CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA22B8B1F300F70004B53CC /* ViewController.swift in Sources */,
+				DAA22B8B1F300F70004B53CC /* CameraVC.swift in Sources */,
 				DAA22B891F300F70004B53CC /* AppDelegate.swift in Sources */,
+				DAA22B9E1F301F57004B53CC /* RoundedShadowView.swift in Sources */,
+				DAA22BA01F3020BC004B53CC /* RoundedShadowButton.swift in Sources */,
+				DAA22BA21F30216B004B53CC /* RoundedShadowImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

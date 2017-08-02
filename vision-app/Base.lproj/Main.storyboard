@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--CameraVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="CameraVC" customModule="vision_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHX-5s-bde" customClass="RoundedShadowView" customModule="vision_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="30" width="335" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HiI-Af-uBh">
+                                        <rect key="frame" x="8" y="8" width="319" height="44.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The names of items captured will appear here." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wbo-LX-T34">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" red="0.96235281229019165" green="0.31918728380671629" blue="0.2226319779132179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CONFIDENCE: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-DR-j2E">
+                                                <rect key="frame" x="0.0" y="29" width="319" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HiI-Af-uBh" secondAttribute="bottom" constant="8" id="8J9-es-eAd"/>
+                                    <constraint firstItem="HiI-Af-uBh" firstAttribute="leading" secondItem="rHX-5s-bde" secondAttribute="leading" constant="8" id="bSs-M8-flo"/>
+                                    <constraint firstItem="HiI-Af-uBh" firstAttribute="top" secondItem="rHX-5s-bde" secondAttribute="top" constant="8" id="hvj-9m-Vi7"/>
+                                    <constraint firstAttribute="height" constant="60" id="qUF-AX-oHA"/>
+                                    <constraint firstAttribute="trailing" secondItem="HiI-Af-uBh" secondAttribute="trailing" constant="8" id="zno-Px-2Ey"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG1-L5-hJO" customClass="RoundedShadowButton" customModule="vision_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="615" width="100" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Iol-dp-P6e"/>
+                                    <constraint firstAttribute="width" constant="100" id="RGh-U9-9HJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                <state key="normal" title="FLASH OFF">
+                                    <color key="titleColor" red="0.96235281229019165" green="0.31918728380671629" blue="0.2226319779132179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EOm-lr-QwE" customClass="RoundedShadowImageView" customModule="vision_app" customModuleProvider="target">
+                                <rect key="frame" x="275" y="517" width="80" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Q7F-tc-VIS"/>
+                                    <constraint firstAttribute="height" constant="130" id="QMC-WI-BlD"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-aV-qKO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pG1-L5-hJO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6gQ-0S-R7v"/>
+                            <constraint firstItem="rHX-5s-bde" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jd8-Ua-jLi"/>
+                            <constraint firstItem="Fbq-aV-qKO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kas-mz-uLC"/>
+                            <constraint firstItem="Fbq-aV-qKO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LWl-t6-XfA"/>
+                            <constraint firstItem="Fbq-aV-qKO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N3M-3d-McI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EOm-lr-QwE" secondAttribute="trailing" constant="20" id="TcP-2E-A0m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EOm-lr-QwE" secondAttribute="bottom" constant="20" id="Wod-ZS-rjj"/>
+                            <constraint firstItem="rHX-5s-bde" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="XEx-75-bkX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pG1-L5-hJO" secondAttribute="bottom" constant="20" id="bzm-rl-D7t"/>
+                            <constraint firstItem="Fbq-aV-qKO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rIK-ff-gJN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rHX-5s-bde" secondAttribute="trailing" constant="20" id="vPF-zj-Q1M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="Fbq-aV-qKO" id="H9k-dx-ad1"/>
+                        <outlet property="captureImageView" destination="EOm-lr-QwE" id="qc8-8N-QO9"/>
+                        <outlet property="confidenceLbl" destination="VpL-DR-j2E" id="qfH-gy-pqH"/>
+                        <outlet property="flashBtn" destination="pG1-L5-hJO" id="m1O-1j-W6U"/>
+                        <outlet property="identificationLbl" destination="Wbo-LX-T34" id="bcs-Tp-cG3"/>
+                        <outlet property="roundedLblView" destination="rHX-5s-bde" id="NWg-Ls-WtH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
